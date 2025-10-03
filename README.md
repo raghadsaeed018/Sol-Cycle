@@ -1,4 +1,4 @@
-🌏 # Sol-Cycle -- Designing Martian Waste Management System --
+# Sol-Cycle -- Designing Martian Waste Management System -- 🌏
 
 NASA SpaceTrash Hack: Revolutionizing Recycling on Mars 
 
