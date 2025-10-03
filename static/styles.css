@@ -11,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Mars Animation Background */
 .mars-bg {
     position: fixed;
     top: 0;
@@ -23,7 +22,6 @@ body {
     z-index: 0;
 }
 
-/* Navigation */
 nav {
     background: rgba(66, 56, 51, 0.95);
     padding: 1.5rem 2rem;
@@ -89,7 +87,6 @@ nav {
     width: 100%;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -112,8 +109,12 @@ nav {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
-    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    0%, 100% { 
+        transform: translate(-50%, -50%) translateY(0px); 
+    }
+    50% { 
+        transform: translate(-50%, -50%) translateY(-20px); 
+    }
 }
 
 .mars-sphere {
@@ -121,10 +122,7 @@ nav {
     height: 100%;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, #ea5c34, #756454);
-    box-shadow: 
-        inset -30px -30px 60px rgba(66, 56, 51, 0.8),
-        0 0 100px rgba(234, 92, 52, 0.5),
-        0 0 200px rgba(234, 92, 52, 0.3);
+    box-shadow: inset -30px -30px 60px rgba(66, 56, 51, 0.8), 0 0 100px rgba(234, 92, 52, 0.5), 0 0 200px rgba(234, 92, 52, 0.3);
     animation: rotate 20s linear infinite;
     position: relative;
 }
@@ -135,15 +133,16 @@ nav {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: 
-        radial-gradient(circle at 60% 40%, transparent 20px, rgba(66, 56, 51, 0.3) 21px, transparent 22px),
-        radial-gradient(circle at 30% 70%, transparent 15px, rgba(66, 56, 51, 0.4) 16px, transparent 17px),
-        radial-gradient(circle at 80% 60%, transparent 25px, rgba(66, 56, 51, 0.3) 26px, transparent 27px);
+    background: radial-gradient(circle at 60% 40%, transparent 20px, rgba(66, 56, 51, 0.3) 21px, transparent 22px), radial-gradient(circle at 30% 70%, transparent 15px, rgba(66, 56, 51, 0.4) 16px, transparent 17px), radial-gradient(circle at 80% 60%, transparent 25px, rgba(66, 56, 51, 0.3) 26px, transparent 27px);
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(360deg); 
+    }
 }
 
 .hero-content {
@@ -161,8 +160,12 @@ nav {
 }
 
 @keyframes glow {
-    from { text-shadow: 0 0 20px rgba(234, 92, 52, 0.6); }
-    to { text-shadow: 0 0 40px rgba(234, 92, 52, 1); }
+    from { 
+        text-shadow: 0 0 20px rgba(234, 92, 52, 0.6); 
+    }
+    to { 
+        text-shadow: 0 0 40px rgba(234, 92, 52, 1); 
+    }
 }
 
 .hero p {
@@ -173,7 +176,6 @@ nav {
     line-height: 1.8;
 }
 
-/* Section Styling */
 section {
     position: relative;
     max-width: 1400px;
@@ -190,7 +192,6 @@ h2 {
     text-shadow: 0 0 20px rgba(234, 92, 52, 0.5);
 }
 
-/* Challenge Section */
 .challenge-content {
     background: rgba(66, 56, 51, 0.8);
     padding: 3rem;
@@ -246,7 +247,6 @@ h2 {
     font-size: 1.1rem;
 }
 
-/* Solution Section */
 .solution-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -309,15 +309,14 @@ h2 {
 }
 
 .solution-card li::before {
-    content: '▸';
+    content: '\25B8';
     position: absolute;
     left: 0;
     color: #ea5c34;
 }
 
-/* Prototype Button */
 .prototype-btn {
-    display: inline-block;
+    display: block;
     margin: 3rem auto;
     padding: 1.5rem 3rem;
     background: linear-gradient(135deg, #ea5c34, #e88d74);
@@ -329,10 +328,7 @@ h2 {
     box-shadow: 0 10px 30px rgba(234, 92, 52, 0.4);
     transition: all 0.3s ease;
     text-align: center;
-    display: block;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .prototype-btn:hover {
@@ -340,7 +336,6 @@ h2 {
     box-shadow: 0 15px 40px rgba(234, 92, 52, 0.6);
 }
 
-/* Team Section */
 .team-intro {
     text-align: center;
     font-size: 1.3rem;
@@ -349,7 +344,6 @@ h2 {
     line-height: 1.8;
 }
 
-/* Scroll to Top */
 .scroll-top {
     position: fixed;
     bottom: 2rem;
@@ -385,7 +379,6 @@ h2 {
     stroke: #423833;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -409,5 +402,9 @@ h2 {
 
     h2 {
         font-size: 2rem;
+    }
+
+    .solution-grid {
+        grid-template-columns: 1fr;
     }
 }
