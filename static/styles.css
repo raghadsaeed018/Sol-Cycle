@@ -1,1 +1,254 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            color: #b8b8b8;
+            font-size: 1.1em;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .stat-card h3 {
+            color: #ff6b35;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: #b8b8b8;
+            font-size: 0.9em;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .search-box::placeholder {
+            color: #888;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 107, 53, 0.2);
+            border-color: #ff6b35;
+        }
+
+        .filter-btn.active {
+            background: #ff6b35;
+            border-color: #ff6b35;
+        }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            border-color: #ff6b35;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .item-icon {
+            font-size: 2.5em;
+        }
+
+        .category-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .category-metals { background: #ffd700; color: #1a1a2e; }
+        .category-plastics { background: #4ecdc4; color: #1a1a2e; }
+        .category-electronics { background: #95e1d3; color: #1a1a2e; }
+        .category-composites { background: #ff6b6b; color: #fff; }
+        .category-glass { background: #a8dadc; color: #1a1a2e; }
+
+        .item-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ff6b35;
+        }
+
+        .item-details {
+            margin-bottom: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        .detail-label {
+            color: #b8b8b8;
+        }
+
+        .detail-value {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .item-description {
+            color: #b8b8b8;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .request-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ff6b35;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .request-btn:hover {
+            background: #ff8555;
+            transform: scale(1.02);
+        }
+
+        .request-btn:active {
+            transform: scale(0.98);
+        }
+
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6b35;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cart:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.7);
+        }
+
+        .cart-count {
+            background: #fff;
+            color: #ff6b35;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #b8b8b8;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .inventory-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
