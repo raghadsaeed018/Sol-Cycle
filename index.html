@@ -1,217 +1,714 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Raghad Osman - Portfolio</title>
-    <link rel="stylesheet" href="static/styles.css"/>
-    <script src="static/script.js"></script>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <div id="home">
-        <div class="profile_name">
-          Raghad Mohammed Ahmed Osman
-          <div class="contact_info">
-            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          raghadsaeed018@gmail.com
-        </div>
-        <div style="clear:both;"></div>
-        <div class="contact_info">
-          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          +966 56 944 5452
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Waste Resource Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        </div>
-        </div>
-        <div class="topdiv">
-          <a class="topmenu" href="#about-me">About Me</a>
-          <!-- Add the links for Skills, Projects and Recommendation here -->
-          <a class="topmenu" href="#skills">Skills</a>
-          <a class="topmenu" href="#projects">Projects</a>
-          <a class="topmenu" href="#recommendations">Recommendations</a>
-        </div>
-      </div>    
-    </nav>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
 
-    <!-- About Me -->
-    <section id="about-me" class="container">
-      <div>
-        <img src="https://media2.giphy.com/media/vKH4mU0p1leRjYRyjx/200w.gif?cid=6c09b952an3pixfx1cjcm57w2389gub8xjqry9n34by4irnk&ep=v1_gifs_search&rid=200w.gif&ct=g" class="profile_image"/>
-      </div>
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
 
-      <div>
-          <h1>
-            Hello there! <img src="https://emojiisland.com/cdn/shop/products/Emoji_Icon_-_Sunglasses_cool_emoji_large.png?v=1571606093" width="60px"/>
-          </h1>
-          <p>
-            I'm an aspiring software engineer with a strong foundation in programming and web application development, specializing in Python and AI integration.
-            On my journey of learning, I gained professional certifications from prestigious institutions, such as IBM AI Developer and Hardvard CS50. 
-            I also developed projects with multiple AI services, frameworks, and tools such as IBM WSL and Hugging Face open source models.
-            I'm currently seeking opportunities to apply my skills and enthusiasm  in real-world projects while continuing to grow as a developer!
-          </p>
-      </div>
-    </section>
-              
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div style="clear:both;"></div>
+        .header h1 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
 
-      <div class="all_skills">
-        <div class="skill">
-          <img src="html_finalprojimages/html5.png"/>
-          <h6>HTML</h6>
-          <p>2 years experience</p>
-        </div>  
+        .header p {
+            color: #b8b8b8;
+            font-size: 1.1em;
+        }
 
-        <div class="skill">
-          <img src="html_finalprojimages/js.jpeg"/>
-          <h6>JavaScript</h6>
-          <p>1.5 years experience</p>
-        </div>  
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
 
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
 
-        <!-- Add more skills here -->
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"/>
-            <h6>Python</h6>
-            <p>2.5 years experience</p>
-        </div>  
+        .stat-card h3 {
+            color: #ff6b35;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
 
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"/>
-            <h6>SQL</h6>
-            <p>1 year experience</p>
-        </div> 
+        .stat-card p {
+            color: #b8b8b8;
+            font-size: 0.9em;
+        }
 
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"/>
-            <h6>C</h6>
-            <p>1 year experience</p>
-        </div> 
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
 
-      </div>
-    </section>
-          
-    <!-- Projects -->
-    <section class="projects" id="projects">
-      <h2>
-        Projects
-      </h2>
-      <div style="clear:both;"></div>
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+        }
 
-        <div id="projects-container" class="projects-container">
-          <div class="project-card">
-            <h3>Emotion Detector & Sentiment Analysis App</h3>
-            <ul>
-              <li>Used IBM Watson AI Libraries for emotion and sentiment detection with Flask-based interface</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Career Guide with AI Integration</h3>
-            <ul>
-              <li>Developed a comprehensive career guidance tool featuring resume enhancement and cover letter generation using IBM WML library</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Speech-Embedded Translator</h3>
-            <ul>
-              <li>Developed a multilingual speech translator powered by IBM WML for real-time processing</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Chatbot with RAG Technique</h3>
-            <ul>
-              <li>Built a Langchain-based chatbot for data retrieval and PDF processing</li>
-            </ul>
-          </div>
-        </div>
-          
-        <h2 style="font-size: 35px;">
-          Hobby Projects
-        </h2>
-        <div style="clear:both;"></div>
+        .search-box::placeholder {
+            color: #888;
+        }
 
-          <div id="projects-container" class="projects-container">
-            <div class="project-card">
-              <h3>Trivia Game</h3>
-              <ul>
-                <li>Developed a functional trivia game website with a homepage using HTML, CSS, Bootstrap, and Javascript</li>
-              </ul>
-            </div>
-            <hr>
-            <div class="project-card">
-              <h3>Informational Article Website about Japan (with Quiz)</h3>
-              <ul>
-                <li>Developed and hosted an informational article website with a homepage, 2 article pages, and a quiz about Japan</li>
-              </ul>
-            </div>
-            <hr>
-            <div class="project-card">
-              <h3>CRUD-Based Virtual Pet Simulator</h3>
-              <ul>
-                <li>Designed and deployed a web app with user registration, CRUD features, SQLite database integration, and modern styling</li>
-              </ul>
-          </div>
-      
-    </section>
-    <div style="clear:both;"></div>
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-    <!-- Recommendations -->
-    <section id="recommendations">
-      <h2>Recommendations</h2>
-      <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Raghad Saeed is a fast learner who excels in quickly understanding new technologies and processes. Her analytical skills and proactive approach make her an indispensable part of any team. She takes initiative and is always eager to learn more, making her a great candidate for leadership roles.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Working with Raghad has been a fantastic experience. She is extremely knowledgeable and always goes the extra mile to ensure that projects are completed to the highest standard. Her dedication and attention to detail are impressive, and I would happily collaborate with her on future projects.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          I had the pleasure of collaborating with Raghad during a crucial project, and her commitment and deep understanding of the task at hand stood out. She is a reliable and resourceful individual who brings valuable insights to the team.
-        </div>
-      </div>
-    </section>
+        .filter-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
 
-    <!-- Recommendation Form -->
-    <section id="contact">
-      <div class="flex_center">
-        <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
-        </fieldset>
-      </div>
-    </section>
+        .filter-btn:hover {
+            background: rgba(255, 107, 53, 0.2);
+            border-color: #ff6b35;
+        }
 
-    <div class="iconbutton">
-      <a href="#home">
-        <!--Add the code here for the logo to appear and the icon to be actionable-->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-      </a>
+        .filter-btn.active {
+            background: #ff6b35;
+            border-color: #ff6b35;
+        }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            border-color: #ff6b35;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .item-icon {
+            font-size: 2.5em;
+        }
+
+        .category-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .category-metals { background: #ffd700; color: #1a1a2e; }
+        .category-plastics { background: #4ecdc4; color: #1a1a2e; }
+        .category-electronics { background: #95e1d3; color: #1a1a2e; }
+        .category-composites { background: #ff6b6b; color: #fff; }
+        .category-glass { background: #a8dadc; color: #1a1a2e; }
+
+        .item-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ff6b35;
+        }
+
+        .item-details {
+            margin-bottom: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        .detail-label {
+            color: #b8b8b8;
+        }
+
+        .detail-value {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .item-description {
+            color: #b8b8b8;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .request-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ff6b35;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .request-btn:hover {
+            background: #ff8555;
+            transform: scale(1.02);
+        }
+
+        .request-btn:active {
+            transform: scale(0.98);
+        }
+
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6b35;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cart:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.7);
+        }
+
+        .cart-count {
+            background: #fff;
+            color: #ff6b35;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #b8b8b8;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .inventory-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Mars Waste Resource Catalog</h1>
+        <p>Transforming waste into valuable resources for Mars colonization</p>
     </div>
 
-    <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3>Thankies a million! Hope you said something nice :)</h3>
-      <button onclick="showPopup(false)">Ok</button>
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3 id="totalItems">24</h3>
+            <p>Total Items</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="totalWeight">1,847</h3>
+            <p>Total Weight (kg)</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="categoriesCount">5</h3>
+            <p>Categories</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="roverCollections">12</h3>
+            <p>Rover Collections</p>
+        </div>
     </div>
-  </body>
+
+    <div class="controls">
+        <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search materials...">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="metals">Metals</button>
+            <button class="filter-btn" data-category="plastics">Plastics</button>
+            <button class="filter-btn" data-category="electronics">Electronics</button>
+            <button class="filter-btn" data-category="composites">Composites</button>
+            <button class="filter-btn" data-category="glass">Glass</button>
+        </div>
+    </div>
+
+    <div class="inventory-grid" id="inventoryGrid"></div>
+
+    <div class="cart" id="cart">
+        🛒 Requests <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <script>
+        // Sample inventory data
+        const inventoryData = [
+            {
+                id: 1,
+                name: "Aluminum Panels",
+                category: "metals",
+                icon: "🔩",
+                weight: 145,
+                quantity: 23,
+                condition: "Good",
+                source: "Rover Collection #7",
+                description: "High-grade aluminum from damaged solar panel frames. Suitable for structural repairs and new construction.",
+                uses: ["Construction", "Repairs", "Tools"]
+            },
+            {
+                id: 2,
+                name: "Steel Fasteners",
+                category: "metals",
+                icon: "🔧",
+                weight: 34,
+                quantity: 156,
+                condition: "Excellent",
+                source: "Habitat Maintenance",
+                description: "Various sizes of steel bolts, screws, and fasteners. Cleaned and sorted.",
+                uses: ["Assembly", "Repairs"]
+            },
+            {
+                id: 3,
+                name: "Copper Wiring",
+                category: "electronics",
+                icon: "⚡",
+                weight: 67,
+                quantity: 89,
+                condition: "Good",
+                source: "Rover Collection #5",
+                description: "Insulated copper wire from decommissioned equipment. Various gauges available.",
+                uses: ["Electrical", "Repairs", "New Systems"]
+            },
+            {
+                id: 4,
+                name: "HDPE Containers",
+                category: "plastics",
+                icon: "🧴",
+                weight: 28,
+                quantity: 41,
+                condition: "Good",
+                source: "Supply Packaging",
+                description: "Food-grade HDPE containers. Can be melted and reformed for new applications.",
+                uses: ["Storage", "3D Printing", "Recycling"]
+            },
+            {
+                id: 5,
+                name: "Circuit Boards",
+                category: "electronics",
+                icon: "💾",
+                weight: 19,
+                quantity: 34,
+                condition: "Mixed",
+                source: "Equipment Salvage",
+                description: "Various PCBs containing valuable metals and components. Requires processing.",
+                uses: ["Metal Recovery", "Component Harvesting"]
+            },
+            {
+                id: 6,
+                name: "Titanium Components",
+                category: "metals",
+                icon: "⚙",
+                weight: 203,
+                quantity: 12,
+                condition: "Excellent",
+                source: "Rover Collection #9",
+                description: "High-value titanium parts from spacecraft components. Excellent for critical applications.",
+                uses: ["High-Stress Parts", "Medical Tools", "Construction"]
+            },
+            {
+                id: 7,
+                name: "Polycarbonate Sheets",
+                category: "plastics",
+                icon: "🪟",
+                weight: 87,
+                quantity: 18,
+                condition: "Good",
+                source: "Habitat Windows",
+                description: "Transparent polycarbonate panels. Some scratching but structurally sound.",
+                uses: ["Windows", "Shields", "Greenhouse"]
+            },
+            {
+                id: 8,
+                name: "Carbon Fiber Tubes",
+                category: "composites",
+                icon: "📏",
+                weight: 56,
+                quantity: 27,
+                condition: "Excellent",
+                source: "Rover Collection #11",
+                description: "Lightweight carbon fiber structural elements. High strength-to-weight ratio.",
+                uses: ["Structural", "Robotics", "Tools"]
+            },
+            {
+                id: 9,
+                name: "Silica Glass",
+                category: "glass",
+                icon: "💎",
+                weight: 112,
+                quantity: 45,
+                condition: "Mixed",
+                source: "Lab Equipment",
+                description: "Various glass containers and components. Can be remelted and reformed.",
+                uses: ["Lab Equipment", "Optics", "Recycling"]
+            },
+            {
+                id: 10,
+                name: "Stainless Steel Mesh",
+                category: "metals",
+                icon: "🕸",
+                weight: 78,
+                quantity: 31,
+                condition: "Good",
+                source: "Filtration Systems",
+                description: "Fine mesh screening from water and air filtration units.",
+                uses: ["Filtration", "Separation", "Reinforcement"]
+            },
+            {
+                id: 11,
+                name: "PVC Piping",
+                category: "plastics",
+                icon: "🚰",
+                weight: 94,
+                quantity: 52,
+                condition: "Good",
+                source: "Habitat Plumbing",
+                description: "Various diameter PVC pipes and fittings. Clean and ready for reuse.",
+                uses: ["Plumbing", "Structure", "Hydroponic Systems"]
+            },
+            {
+                id: 12,
+                name: "LED Components",
+                category: "electronics",
+                icon: "💡",
+                weight: 12,
+                quantity: 187,
+                condition: "Mixed",
+                source: "Lighting Systems",
+                description: "LED chips and assemblies from various sources. Many still functional.",
+                uses: ["Lighting", "Indicators", "Grow Lights"]
+            },
+            {
+                id: 13,
+                name: "Kevlar Fabric",
+                category: "composites",
+                icon: "🧵",
+                weight: 43,
+                quantity: 15,
+                condition: "Good",
+                source: "Protective Gear",
+                description: "High-strength aramid fiber sheets. Excellent for reinforcement applications.",
+                uses: ["Protection", "Reinforcement", "Repairs"]
+            },
+            {
+                id: 14,
+                name: "Iron Oxide Powder",
+                category: "metals",
+                icon: "🟤",
+                weight: 234,
+                quantity: 8,
+                condition: "Excellent",
+                source: "Regolith Processing",
+                description: "Refined iron oxide from Martian regolith. Can be reduced to metallic iron.",
+                uses: ["Smelting", "3D Printing", "Construction"]
+            },
+            {
+                id: 15,
+                name: "Acrylic Panels",
+                category: "plastics",
+                icon: "🖼",
+                weight: 67,
+                quantity: 22,
+                condition: "Good",
+                source: "Display Units",
+                description: "Clear acrylic sheets from decommissioned displays and panels.",
+                uses: ["Windows", "Displays", "Prototypes"]
+            },
+            {
+                id: 16,
+                name: "Lithium Batteries",
+                category: "electronics",
+                icon: "🔋",
+                weight: 145,
+                quantity: 38,
+                condition: "Depleted",
+                source: "Equipment Salvage",
+                description: "Used lithium-ion cells. Valuable for lithium recovery and recycling.",
+                uses: ["Lithium Recovery", "Recycling", "Research"]
+            },
+            {
+                id: 17,
+                name: "Fiberglass Insulation",
+                category: "composites",
+                icon: "🧊",
+                weight: 89,
+                quantity: 34,
+                condition: "Good",
+                source: "Habitat Insulation",
+                description: "Thermal insulation material. Can be repurposed or recycled.",
+                uses: ["Insulation", "Thermal Control", "Soundproofing"]
+            },
+            {
+                id: 18,
+                name: "Magnesium Alloy Parts",
+                category: "metals",
+                icon: "✨",
+                weight: 76,
+                quantity: 19,
+                condition: "Excellent",
+                source: "Rover Collection #8",
+                description: "Lightweight magnesium alloy components. Ideal for applications requiring low weight.",
+                uses: ["Lightweight Structures", "Tools", "Equipment"]
+            },
+            {
+                id: 19,
+                name: "Silicone Rubber",
+                category: "plastics",
+                icon: "⭕",
+                weight: 45,
+                quantity: 67,
+                condition: "Good",
+                source: "Seals & Gaskets",
+                description: "Various silicone rubber components. Heat-resistant and flexible.",
+                uses: ["Seals", "Gaskets", "Flexible Components"]
+            },
+            {
+                id: 20,
+                name: "Optical Lenses",
+                category: "glass",
+                icon: "🔍",
+                weight: 23,
+                quantity: 28,
+                condition: "Mixed",
+                source: "Cameras & Sensors",
+                description: "Various optical lenses from imaging equipment. Some minor damage.",
+                uses: ["Optics", "Sensors", "Research"]
+            },
+            {
+                id: 21,
+                name: "Epoxy Resin",
+                category: "composites",
+                icon: "🧪",
+                weight: 38,
+                quantity: 14,
+                condition: "Good",
+                source: "Repair Supplies",
+                description: "Two-part epoxy adhesive. Stored properly and still usable.",
+                uses: ["Bonding", "Repairs", "Sealing"]
+            },
+            {
+                id: 22,
+                name: "Ceramic Tiles",
+                category: "glass",
+                icon: "⬜",
+                weight: 156,
+                quantity: 89,
+                condition: "Good",
+                source: "Heat Shielding",
+                description: "High-temperature ceramic tiles. Excellent thermal properties.",
+                uses: ["Heat Shielding", "Insulation", "Lab Equipment"]
+            },
+            {
+                id: 23,
+                name: "Rubber O-Rings",
+                category: "plastics",
+                icon: "⭕",
+                weight: 8,
+                quantity: 342,
+                condition: "Mixed",
+                source: "Various Systems",
+                description: "Assorted sizes of rubber O-rings and seals. Sorted by size.",
+                uses: ["Sealing", "Repairs", "Maintenance"]
+            },
+            {
+                id: 24,
+                name: "Graphite Rods",
+                category: "composites",
+                icon: "📊",
+                weight: 34,
+                quantity: 23,
+                condition: "Excellent",
+                source: "Electrical Systems",
+                description: "Pure graphite rods. Conductive and heat-resistant.",
+                uses: ["Electrodes", "Lubrication", "Thermal Management"]
+            }
+        ];
+
+        let currentFilter = 'all';
+        let requestedItems = [];
+
+        // Render inventory
+        function renderInventory(items) {
+            const grid = document.getElementById('inventoryGrid');
+            
+            if (items.length === 0) {
+                grid.innerHTML = '<div class="no-results">No items found matching your criteria.</div>';
+                return;
+            }
+
+            grid.innerHTML = items.map(item => `
+                <div class="item-card" data-category="${item.category}">
+                    <div class="item-header">
+                        <div class="item-icon">${item.icon}</div>
+                        <span class="category-badge category-${item.category}">${item.category.toUpperCase()}</span>
+                    </div>
+                    <h3 class="item-title">${item.name}</h3>
+                    <div class="item-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Weight:</span>
+                            <span class="detail-value">${item.weight} kg</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Quantity:</span>
+                            <span class="detail-value">${item.quantity} units</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Condition:</span>
+                            <span class="detail-value">${item.condition}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Source:</span>
+                            <span class="detail-value">${item.source}</span>
+                        </div>
+                    </div>
+                    <p class="item-description">${item.description}</p>
+                    <button class="request-btn" onclick="requestItem(${item.id}, '${item.name}')">
+                        Request Material
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // Filter functionality
+        function filterItems(category) {
+            currentFilter = category;
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            
+            let filtered = inventoryData;
+            
+            if (category !== 'all') {
+                filtered = filtered.filter(item => item.category === category);
+            }
+            
+            if (searchTerm) {
+                filtered = filtered.filter(item => 
+                    item.name.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm) ||
+                    item.category.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            renderInventory(filtered);
+        }
+
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            filterItems(currentFilter);
+        });
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                filterItems(e.target.dataset.category);
+            });
+        });
+
+        // Request item
+        function requestItem(id, name) {
+            if (!requestedItems.includes(id)) {
+                requestedItems.push(id);
+                updateCart();
+                alert(✅ Request submitted for: ${name}\n\nYour request has been logged and is pending approval.);
+            } else {
+                alert(ℹ You have already requested: ${name});
+            }
+        }
+
+        // Update cart
+        function updateCart() {
+            document.getElementById('cartCount').textContent = requestedItems.length;
+        }
+
+        // Cart click
+        document.getElementById('cart').addEventListener('click', () => {
+            if (requestedItems.length === 0) {
+                alert('🛒 Your request cart is empty.\n\nBrowse the catalog and request materials you need!');
+            } else {
+                const requestedNames = requestedItems.map(id => {
+                    const item = inventoryData.find(i => i.id === id);
+                    return item ? item.name : '';
+                }).join('\n• ');
+                
+                alert(🛒 Your Requested Materials:\n\n• ${requestedNames}\n\nTotal: ${requestedItems.length} items);
+            }
+        });
+
+        // Initialize
+        renderInventory(inventoryData);
+    </script>
+</body>
 </html>
-
-
-
-
