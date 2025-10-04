@@ -1,157 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol Cycle - Mars Waste Revolution</title>
-    <link rel="stylesheet" href="static/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRYO-SHATTER | Sol Cycle</title>
+
+  <!-- Fonts & Chart.js -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="static/style.css" />
+  <script defer src="static/script.js"></script>
 </head>
 <body>
-    <div class="mars-bg"></div>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="brand">
+      <div class="logo">Sol Cycle</div>
+      <div class="subtitle">CRYO-SHATTER Recycling System</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#process">How it Works</a></li>
+      <li><a href="#dashboard">Resource & Finance</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+  </nav>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div>
-                <div class="logo">Sol Cycle</div>
-                <div class="contact-info">✉ vaarunisaxena@gmail.com</div>
-            </div>
-            <div class="nav-links">
-                <a href="#challenge">Challenge</a>
-                <a href="#solution">Our Solution</a>
-                <a href="#impact">Impact</a>
-                <a href="#team">Team</a>
-            </div>
-        </div>
-    </nav>
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title">CRYO-SHATTER Recycling System</h1>
+      <p class="hero-sub">Turning Martian cold and trash into the foundation of future colonies.</p>
+      <div class="hero-cta">
+        <button class="btn" onclick="scrollToSection('overview')">Learn More</button>
+        <a class="btn ghost" href="#dashboard">Resource Dashboard</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="mars-container">
-            <div class="mars-sphere"></div>
-        </div>
-        <div class="hero-content">
-            <h1>Revolutionizing Recycling on Mars</h1>
-            <p>NASA Space Apps Challenge 2024 - Transforming Martian waste into sustainable resources through innovative cryo-shatter technology</p>
-        </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section id="challenge">
-        <h2>The Challenge</h2>
-        <div class="challenge-content">
-            <h3>NASA SpaceTrash Hack</h3>
-            <p>During a hypothetical three-year mission to Mars and back, an eight-person crew would accumulate significant amounts of inorganic waste. This creates a pressing need to recycle available materials rather than execute expensive and inefficient processes of transporting additional resources from Earth or sending trash back.</p>
-            
-            <p>Our mission is to design sustainable systems that manage, reuse, and recycle inorganic waste accumulated on Mars, paving the way for long-term human exploration and settlement.</p>
-
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">12,600kg</div>
-                    <div class="stat-label">Waste Generated</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">3 Years</div>
-                    <div class="stat-label">Mission Duration</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">8 People</div>
-                    <div class="stat-label">Crew Size</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section id="solution">
-        <h2>Our Innovation: Cryo-Shatter Recycling</h2>
-        <div class="solution-grid">
-            <div class="solution-card">
-                <h3>The Concept</h3>
-                <p>We exploit Mars's extreme -80°F nights to make waste incredibly brittle, then use resonant frequency vibrations to shatter it into pure, sorted particles.</p>
-            </div>
-
-            <div class="solution-card">
-                <h3>How It Works</h3>
-                <ul>
-                    <li>Expose waste to Martian nights for natural freezing</li>
-                    <li>Ultra-cold temperatures make materials brittle at different rates</li>
-                    <li>Sonic pulverizer uses specific frequencies to shatter materials selectively</li>
-                    <li>Automated sieving separates pure material particles</li>
-                    <li>Each material type routed to appropriate processor</li>
-                </ul>
-            </div>
-
-            <div class="solution-card">
-                <h3>Ice Composite Bricks</h3>
-                <p>Our breakthrough innovation: Mix waste particles with Martian ice to create structural blocks. During emergencies, melt them for water while the waste aggregate provides structure.</p>
-            </div>
-
-            <div class="solution-card">
-                <h3>Why It's Revolutionary</h3>
-                <p>Instead of fighting Mars's extreme environment, we use it as a tool. This zero-energy freezing process, combined with precision sonic shattering, creates a sustainable closed-loop system perfect for long-term settlements.</p>
-            </div>
-        </div>
-
-        <a href="#prototype" class="prototype-btn">View Interactive Prototype →</a>
-    </section>
-
-    <!-- Impact Section -->
-    <section id="impact">
-        <h2>Mission Impact</h2>
-        <div class="challenge-content">
-            <h3>Transforming Mars Exploration</h3>
-            <p>This project enables researchers, astronauts, and future settlers to explore Mars in its pristine form, without inorganic waste obstructing scientific procedures.</p>
-            
-            <p>Our systematic approach to waste management, combined with the use of local Martian resources, unlocks access to critical information and capabilities:</p>
-            
-            <ul style="list-style: none; margin-top: 2rem;">
-                <li style="color: #e88d74; margin: 1rem 0; padding-left: 2rem; position: relative;">
-                    <span style="position: absolute; left: 0; color: #ea5c34;">▸</span>
-                    Sustainable life support systems for extended missions
-                </li>
-                <li style="color: #e88d74; margin: 1rem 0; padding-left: 2rem; position: relative;">
-                    <span style="position: absolute; left: 0; color: #ea5c34;">▸</span>
-                    Construction materials manufactured from waste
-                </li>
-                <li style="color: #e88d74; margin: 1rem 0; padding-left: 2rem; position: relative;">
-                    <span style="position: absolute; left: 0; color: #ea5c34;">▸</span>
-                    Reduced dependency on Earth resupply missions
-                </li>
-                <li style="color: #e88d74; margin: 1rem 0; padding-left: 2rem; position: relative;">
-                    <span style="position: absolute; left: 0; color: #ea5c34;">▸</span>
-                    Emergency water and oxygen reserves from ice composites
-                </li>
-                <li style="color: #e88d74; margin: 1rem 0; padding-left: 2rem; position: relative;">
-                    <span style="position: absolute; left: 0; color: #ea5c34;">▸</span>
-                    Foundation for permanent Martian settlements
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team">
-        <h2>Team Sol Cycle</h2>
-        <div class="team-intro">
-            We are a dedicated team of innovators participating in the NASA Space Apps Challenge,<br>
-            committed to solving real-world space exploration challenges through creative engineering and sustainable design.
-        </div>
-        <div class="challenge-content" style="text-align: center;">
-            <h3 style="color: #ea5c34; margin-bottom: 1rem;">Get In Touch</h3>
-            <p style="font-size: 1.3rem;">✉ vaarunisaxena@gmail.com</p>
-            <p style="margin-top: 2rem; color: #e88d74;">Together, we're building the future of sustainable space exploration.</p>
-        </div>
-    </section>
-
-    <!-- Scroll to Top Button -->
-    <div class="scroll-top" id="scrollTop">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+  <!-- OVERVIEW (problem + solution) -->
+  <section id="overview" class="section container">
+    <div class="two-col fade-up">
+      <div class="box">
+        <h2>The Problem</h2>
+        <p>
+          An 8-person crew generates <strong>12,600 kg</strong> of inorganic waste across a 3-year mission.
+          Transporting waste back to Earth or bringing extra materials is expensive and inefficient.
+          Traditional recycling methods require far more energy than available on Mars.
+        </p>
+      </div>
+      <div class="box">
+        <h2>The Solution</h2>
+        <p>
+          <strong>CRYO-SHATTER</strong> uses Mars’s extreme cold (−80°C to −125°C) to embrittle waste, then
+          applies resonant ultrasonic shattering and mixes the powders with Martian ice to form a
+          high-strength Ice-Waste Matrix (IWM).
+        </p>
+      </div>
     </div>
 
-    <script src="static/script.js"></script>
+    <div class="full-card fade-up">
+      <h3>Quick System Summary</h3>
+      <div class="summary-grid">
+        <div class="stat">
+          <div class="num">Step 1</div>
+          <div class="label">Cryo-Exposure</div>
+        </div>
+        <div class="stat">
+          <div class="num">Step 2</div>
+          <div class="label">Resonant Shattering</div>
+        </div>
+        <div class="stat">
+          <div class="num">Step 3</div>
+          <div class="label">Ice-Waste Matrix</div>
+        </div>
+        <div class="stat">
+          <div class="num">23 MPa</div>
+          <div class="label">Material Strength</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="process" class="section container">
+    <h2 class="section-title fade-up">How CRYO-SHATTER Works</h2>
+    <div class="grid-3 fade-up">
+      <article class="card">
+        <div class="card-icon">❄️</div>
+        <h3>Cryo-Exposure</h3>
+        <p>Waste is left in Martian cold overnight to embrittle materials — minimal energy use.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">🔊</div>
+        <h3>Resonant Frequency Shattering</h3>
+        <p>Ultrasonic transducers tuned to material resonance fractures components into powders for sorting.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">🧊</div>
+        <h3>Ice-Waste Matrix (IWM)</h3>
+        <p>Powders are mixed with subsurface ice (typical mix: 60% ice, 30% plastic, 10% metal) and molded.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- KEY BENEFITS -->
+  <section class="section container">
+    <h2 class="section-title fade-up">Key Benefits</h2>
+    <div class="grid-4 fade-up">
+      <div class="feature card">
+        <h4>Energy Efficient</h4>
+        <p>Uses Martian cold to do most of the work — up to <strong>96% less energy</strong> than standard recycling.</p>
+      </div>
+      <div class="feature card">
+        <h4>Resource Multiplication</h4>
+        <p><strong>12,600 kg</strong> waste + <strong>120,000 kg</strong> ice → ≈<strong>180,000 kg</strong> usable material.</p>
+      </div>
+      <div class="feature card">
+        <h4>Dual-Purpose Structures</h4>
+        <p>Buildings double as emergency water reserves and provide superior radiation shielding (~40%).</p>
+      </div>
+      <div class="feature card">
+        <h4>Psychological & Legacy</h4>
+        <p>Transforms waste into visible infrastructure — reduces anxiety and builds a legacy for future crews.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD: Resources (left) + Finance (right) -->
+  <section id="dashboard" class="section container">
+    <h2 class="section-title fade-up">Resource & Finance Dashboard</h2>
+
+    <div class="dashboard fade-up">
+      <!-- RESOURCE PANEL -->
+      <div class="panel resource-panel">
+        <h3>Resource Conversion</h3>
+        <p class="muted">How waste and ice combine to create construction material.</p>
+
+        <div class="panel-row">
+          <div class="metric">
+            <div class="metric-label">Inorganic Waste</div>
+            <div class="metric-value">12,600 kg</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Collected Ice</div>
+            <div class="metric-value">120,000 kg</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Output Material</div>
+            <div class="metric-value">~180,000 kg</div>
+          </div>
+        </div>
+
+        <div class="chart-wrap">
+          <canvas id="resourceChart"></canvas>
+        </div>
+
+        <p class="muted small">Tip: hover bars for exact mass values.</p>
+      </div>
+
+      <!-- FINANCE PANEL -->
+      <div class="panel finance-panel">
+        <h3>Finance & Mission Savings</h3>
+        <p class="muted">We present launch & start-up numbers as mission cost and savings equivalents.</p>
+
+        <div class="finance-cards">
+          <div class="finance-card">
+            <div class="label">Start-Up Cost</div>
+            <div class="value">$50,420,000</div>
+          </div>
+          <div class="finance-card">
+            <div class="label">Launch Mass</div>
+            <div class="value">220 kg</div>
+          </div>
+          <div class="finance-card">
+            <div class="label">Launch Cost ($10,000/kg)</div>
+            <div class="value">$2,200,000</div>
+          </div>
+        </div>
+
+        <div class="chart-wrap small">
+          <canvas id="financeChart"></canvas>
+        </div>
+
+        <div class="finance-summary">
+          <div><strong>Waste Recycled</strong>: 12,600 kg</div>
+          <div><strong>Equivalent Mass Saved</strong>: 11,970 kg</div>
+          <div><strong>Launch Cost Saved</strong>: $119,700,000</div>
+          <div><strong>Net Savings</strong>: $67,900,000</div>
+          <div><strong>ROI</strong>: 137%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION IMPACT TIMELINE -->
+  <section id="impact" class="section container">
+    <h2 class="section-title fade-up">Mission Impact</h2>
+    <div class="timeline fade-up">
+      <div class="timeline-step">
+        <div class="step-marker">1</div>
+        <div class="step-content">
+          <h4>Immediate</h4>
+          <p>Zero-waste operations during the 3-year mission; usable materials for urgent repairs & shelter.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-marker">2</div>
+        <div class="step-content">
+          <h4>Medium-Term</h4>
+          <p>Future crews arrive to prepared infrastructure — hab extensions, greenhouses, and roads.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-marker">3</div>
+        <div class="step-content">
+          <h4>Long-Term</h4>
+          <p>Foundation for self-sustaining colonies; lower dependency on Earth resupply.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section class="section container">
+    <h2 class="section-title fade-up">What We Build</h2>
+    <div class="grid-3 fade-up">
+      <div class="card"><h4>Habitat Extensions</h4><p>200+ m² modules built from IWM blocks.</p></div>
+      <div class="card"><h4>Greenhouses</h4><p>Transparent waste-glass domes for crops & protection.</p></div>
+      <div class="card"><h4>Self-Healing Roads</h4><p>Thermoplastic particles repair microcracks.</p></div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section container">
+    <h2 class="section-title fade-up">Team Sol Cycle</h2>
+    <div class="team-grid fade-up">
+      <div class="team-card">
+        <div class="avatar">VS</div>
+        <h3>Vaaruni Saxena</h3>
+      </div>
+      <div class="team-card">
+        <div class="avatar">JJ</div>
+        <h3>Jewel Jullianne</h3>
+      </div>
+      <div class="team-card">
+        <div class="avatar">MT</div>
+        <h3>Mohammed Tamer</h3>
+      </div>
+      <div class="team-card">
+        <div class="avatar">A</div>
+        <h3>Abdullah</h3>
+      </div>
+      <div class="team-card">
+        <div class="avatar">T</div>
+        <h3>Theo</h3>
+      </div>
+      <div class="team-card">
+        <div class="avatar">R</div>
+        <h3>Raghad Mohammed</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section class="vision-quote">
+    <div class="vision-overlay"></div>
+    <div class="vision-inner">
+      <h2>From trash and ice, we build worlds.</h2>
+      <p>Turns Mars's greatest threat into humanity’s greatest industrial asset.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div>
+        <p class="muted">Contact</p>
+        <a href="mailto:vaarunisaxena@gmail.com" class="email">vaarunisaxena@gmail.com</a>
+      </div>
+      <div class="footer-right">
+        <p class="muted">On Mars, waste isn’t waste — it’s survival.</p>
+        <p>&copy; 2025 Team Sol Cycle</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-
