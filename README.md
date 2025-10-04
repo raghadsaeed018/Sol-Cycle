@@ -1,98 +1,83 @@
-# Sol-Cycle -- CRYO-SHATTER RECYCLING SYSTEM 🌏
-
-Main Project Overview
+# 🌌 Sol-Cycle — Cryo-Shatter: Turning Martian Waste into Infrastructure
 
 
-THE PROBLEM
+**Team:** Sol Cycle  
+**Challenge:** NASA SpaceTrash Hack 2025 — *Designing a Martian Waste Management System*  
+**Prototype Name:** Cryo-Shatter  
+**Mission:** Revolutionize recycling on Mars through ultra-low-energy waste-to-infrastructure technology.
 
-- 8-person crew generates 12,600 kg of inorganic waste over 3 years
-- Shipping waste back to Earth or bringing extra resources is expensive and inefficient
-- Traditional recycling requires massive energy (unavailable on Mars)
+---
 
+## 🚀 The Problem
 
+A 3-year Mars mission with 8 astronauts would produce around **12,600 kg of inorganic waste** — plastics, metals, packaging, glass, textiles, and more.  
+Shipping trash back to Earth is **impossible**. Recycling it traditionally is **energy-prohibitive**.  
+So, how can astronauts turn their own waste into something useful for survival?
 
-THE SOLUTION: CRYO-SHATTER
+---
 
-Uses Mars’s extreme cold (-80°C to -125°C) as a free industrial tool to transform waste into construction materials
+## 💡 The Solution — *Cryo-Shatter*
 
+**Cryo-Shatter** transforms Martian waste into **concrete-strength building material** using Mars’s extreme cold and sound waves.
 
-HOW IT WORKS
+### ⚙️ How It Works
 
-Step 1: Cryo-Exposure
+1. **Cryo Exposure** – Waste is left outside overnight to naturally freeze at **–87 °C**, becoming glass-brittle.  
+2. **Resonant Frequency Shattering** – Ultrasonic waves (8–30 kHz) shatter frozen materials by frequency, separating metals, plastics, glass, and ceramics.  
+3. **Material Sorting** – Automated sorting yields **15+ pure materials**.  
+4. **Ice-Waste Matrix (IWM)** – Sorted powders are mixed with Martian ice to form a **23 MPa concrete-strength composite** that doubles as emergency water storage.
 
-- Waste placed outside overnight in Martian cold
-- Materials become glass-brittle (no energy needed)
+---
 
-Step 2: Resonant Frequency Shattering
+## 🧱 What We Built
 
-- Ultrasonic vibrations at specific frequencies (8-30 kHz)
-- Each material type shatters selectively into pure powder
-- Metal, plastic, glass, ceramics separated automatically
+A working **prototype visualization** demonstrating:
+- Cryo-Shatter process stages  
+- Ice-Waste Matrix composition  
+- Structural applications: **habitat extensions, domes, greenhouses, and radiation-shielding roads**
 
-Step 3: Ice-Waste Matrix (IWM) Creation
+> 🌠 Converts 12,600 kg of mission waste into **~180,000 kg of construction materials**  
+> ⚡ Uses **96% less energy** than Earth-based recycling methods  
 
-- Mix sorted waste with Martian subsurface ice (60% ice, 30% plastic, 10% metal)
-- Pour into molds, freeze overnight
-- Creates concrete-strength building material (23 MPa)
+---
 
+## 🌍 Key Benefits
 
+| Category | Impact |
+|-----------|--------|
+| ⚡ Energy Efficiency | Mars does 90% of the recycling work for free |
+| 🔁 Resource Multiplication | Waste + ice = infrastructure |
+| 🧱 Dual-Purpose Structures | Buildings double as emergency water reserves |
+| 🧠 Psychological | Turns “trash” into tangible progress — boosts crew morale |
+| 🛠️ Sustainability | No waste returned to Earth — all reused in-situ |
 
- KEY BENEFITS
+---
 
-Energy Efficient
+## 🏗️ What Can Be Built
+- 200 m² + habitat extensions  
+- Transparent waste-glass greenhouses  
+- 1 km + self-healing roads  
+- 8 + emergency shelters  
+- Radiation-shielding berms  
+- Landing pads & water-reserve walls  
 
-- 96% less energy than traditional recycling
-- Mars does 90% of the work for free
+---
 
-Resource Multiplication
+## 🌠 Mission Impact
 
-- 12,600 kg waste + 120,000 kg Martian ice = 180,000 kg construction material
-- Zero waste returned to Earth
+| Timeline | Result |
+|-----------|---------|
+| Immediate | Zero-waste management for 3-year mission |
+| Mid-Term | Next crew inherits and expands infrastructure |
+| Long-Term | Foundation for self-sustaining Martian colonies |
 
-Dual-Purpose Structures
+---
 
-- Buildings ARE emergency water reserves (melt walls in crisis)
-- 40% better radiation shielding than pure ice
-- Self-healing roads (thermoplastic particles flow into cracks)
+## 📎 Links
+- 🌐 [Live Prototype Website](https://raghadsaeed018.github.io/Sol-Cycle/)  
+- 📘 [NASA Space Apps Challenge](https://www.spaceappschallenge.org/)
 
-Psychological Impact
+---
 
-- Crew sees trash transform into visible infrastructure
-- Creates legacy for future missions
-- Reduces resource anxiety
-
-
-
- WHAT WE BUILD
-
-- Habitat extensions (200+ m²)
-- Greenhouses with transparent waste-glass domes
-- 1+ km of self-healing roads
-- Emergency shelters (8+ units)
-- Landing pads
-- Radiation shielding berms
-- Water reserves in every structure
-
-
-
-MISSION IMPACT
-
-- **Immediate:** Zero-waste three-year mission
-- **Medium-term:** Next crew lands on existing infrastructure (not empty desert)
-- **Long-term:** Foundation for self-sufficient Mars colonies
-
-
-
- WHY IT’S REVOLUTIONARY
-
-Turns Mars’s greatest threat (extreme cold) into humanity’s greatest industrial asset—proving humans can build civilizations, not just visit planets
-
-
-
- THE VISION
-
-From trash and ice, we build worlds.
-
-
-
+### 🪐 “From trash and ice, we build worlds.”
 
